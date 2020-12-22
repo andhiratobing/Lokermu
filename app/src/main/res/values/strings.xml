@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Lokermu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_onboarding1">Selamat Datang di Lokermu</string>
+    <string name="deskripsi_onboarding1">Apakah andan ingin Sukses? Tentukan pilihan mu sekarang juga</string>
+
+    <string name="title_onboarding2">Selamat Datang di Lokermu</string>
+    <string name="deskripsi_onboarding2">Wujudkan cita - cita mu dengan pekerjaan yang sesuai dengan keinginanmu </string>
+
+    <string name="title_onboarding3">Selamat Datang di Lokermu</string>
+    <string name="deskripsi_onboarding3">Jangan ragu untuk memulai dan wujudkan mimpimu</string>
+    <string name="yuk_langsung_saja">Yuk langsung saja</string>
+    <string name="belum_punya_akun">Belum Punya Akun?</string>
+    <string name="daftar">Daftar</string>
+    <string name="todo">TODO</string>
+    <string name="pendaftaran_akun">Pendaftaran Akun</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="email_no_hp">Email/No Hp</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="konfrimasi_kata_sandi">Konfrimasi Kata Sandi</string>
+    <string name="check_box_register">Saya sudah membaca dan menyetujui Syarat Ketentuan dan Kebijakan Privasi dari Lokermu</string>
+
+</resources>

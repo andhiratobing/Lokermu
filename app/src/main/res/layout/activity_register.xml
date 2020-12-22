@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#014A73"
+    app:popupTheme="@style/AppTheme.NoActionBar"
+    tools:context=".RegisterActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBar_register"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#014A73"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back_putih"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:background="#014A73">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/image_lokermu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/toolbar_register"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo"
+                android:layout_gravity="center"
+                android:src="@drawable/logo_lokermu"/>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/AppBar_register"
+        android:background="#D0D7F9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_Register"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="2dp"
+                app:cardBackgroundColor="@color/putih"
+                app:cardCornerRadius="12dp">
+
+                <RelativeLayout
+                    android:id="@+id/rv_title_Register"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:gravity="center"
+                        android:text="@string/pendaftaran_akun"
+                        android:textColor="#0E527B"
+                        android:textSize="22sp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/input_daftar"
+                        android:layout_below="@id/textRegister"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputNamaPangkalan"
+                            style="@style/parent"
+                            android:layout_margin="20dp">
+
+                            <EditText
+                                android:id="@+id/et_nama_lengkap"
+                                style="@style/modifiedEditText"
+                                android:fontFamily="@font/ubuntu"
+                                android:hint="@string/nama_lengkap"
+                                android:inputType="text|textCapWords"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:textColor="#1A1C4D"
+                                android:textSize="15sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputEmail"
+                            style="@style/parent"
+                            android:layout_margin="20dp">
+
+                            <EditText
+                                android:id="@+id/et_Email"
+                                style="@style/modifiedEditText"
+                                android:fontFamily="@font/ubuntu"
+                                android:hint="@string/email_no_hp"
+                                android:inputType="textEmailAddress"
+                                android:lines="1"
+                                android:maxLength="100"
+                                android:maxLines="1"
+                                android:textColor="#1A1C4D"
+                                android:textSize="15sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputPassword"
+                            app:passwordToggleEnabled="true"
+                            style="@style/parent"
+                            android:layout_margin="20dp">
+
+                            <EditText
+                                android:id="@+id/et_kata_sandi"
+                                android:enabled="true"
+                                style="@style/modifiedEditText"
+                                android:hint="@string/kata_sandi"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:clickable="true"
+                                android:freezesText="true"
+                                android:singleLine="true"
+                                android:maxLength="100"
+                                android:fontFamily="@font/ubuntu"
+                                android:textColor="#1A1C4D"
+                                android:textSize="15sp"
+                                android:inputType="textPassword"
+                                android:focusable="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textKonfirmasiPassword"
+                            app:passwordToggleEnabled="true"
+                            style="@style/parent"
+                            android:layout_margin="20dp">
+
+                            <EditText
+                                android:id="@+id/et_konfirmasi_kata_sandi"
+                                android:enabled="true"
+                                style="@style/modifiedEditText"
+                                android:hint="@string/konfrimasi_kata_sandi"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:clickable="true"
+                                android:freezesText="true"
+                                android:singleLine="true"
+                                android:maxLength="100"
+                                android:fontFamily="@font/ubuntu"
+                                android:textColor="#1A1C4D"
+                                android:textSize="15sp"
+                                android:inputType="textPassword"
+                                android:focusable="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linear_layout_lupa_katasandi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/input_daftar"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="20dp"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:fontFamily="@font/ubuntu"
+                            android:textColor="@color/colorText"
+                            android:text="@string/check_box_register"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_daftar"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear_layout_lupa_katasandi"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/backg_button"
+                        android:fontFamily="@font/roboto_medium"
+                        android:letterSpacing="0.2"
+                        android:text="Daftar"
+                        android:textAllCaps="false"
+                        android:textColor="@color/putih"
+                        android:textSize="19sp" />
+
+                    <View
+                        android:layout_margin="20dp"
+                        android:layout_below="@id/btn_daftar"
+                        android:background="@color/colorText"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/linear_layout_alternatif_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_below="@+id/btn_daftar"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_facebook" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_google" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_whatsapp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

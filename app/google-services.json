@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "631209124810",
+    "project_id": "lokermu-bc4f5",
+    "storage_bucket": "lokermu-bc4f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631209124810:android:a465d5d7e42daf43362533",
+        "android_client_info": {
+          "package_name": "com.example.lokermu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "631209124810-lcs6b1qr8f3c024aa33v6iu62mbitcf9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8qjgltkbb7Jqelsh-hQxc_oAAjyECWxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "631209124810-lcs6b1qr8f3c024aa33v6iu62mbitcf9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
