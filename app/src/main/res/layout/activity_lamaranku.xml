@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#014A73"
+    android:fitsSystemWindows="true"
+    app:popupTheme="@style/AppTheme.NoActionBar"
+    tools:context=".Activity.LamarankuActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBar_lamaranku"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#014A73"
+        android:layout_marginBottom="20dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_lamaranku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back_putih"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:background="#014A73">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:gravity="center"
+                android:text="Berkas Lamaran Pekerjaan"
+                android:textColor="@color/putih"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_below="@id/AppBar_lamaranku"
+        android:orientation="vertical"
+        android:background="#D0D7F9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:fontFamily="@font/ubuntu_bold"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="Kirim Berkas Lamaraan"
+            android:textColor="#014A73"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#D0D7F9"
+            android:src="@drawable/ic_lamaran_kirim" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/keterangan"
+                android:fontFamily="@font/ubuntu"
+                android:textSize="17sp"
+                android:textStyle="normal"
+                android:gravity="start"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:textColor="@color/colorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

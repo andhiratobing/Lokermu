@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/putih"
+    android:fitsSystemWindows="true"
+    app:popupTheme="@style/AppTheme.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ProfileActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBar_pengaturan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#014A73"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_filter_pengaturan"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back_putih"
+            app:titleTextAppearance="@style/Toolbar.TitleText">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_view_foto_profile"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_foto_user"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="4dp" />
+
+        <LinearLayout
+            android:id="@+id/Linear_layout_nama_pangkalan"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_nama_pangkalan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:textColor="@color/putih"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/ic_ubah_nama_pangkalan"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_edit_putih"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:contentDescription="TODO" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_below="@id/AppBar_pengaturan"
+        android:background="#D0D7F9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_akun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:popupTheme="@style/AppTheme.NoActionBar">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rv_data_pribadi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|top"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_data_pribadi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/ubuntu_bold"
+                                android:gravity="left"
+                                android:text="Data pribadi"
+                                android:textColor="@color/colorText"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/Linear_layout_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_data_pribadi"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="60dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ic_email"
+                                android:layout_width="22dp"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center"
+                                android:scaleType="centerCrop"
+                                android:layout_marginStart="5dp"
+                                android:gravity="left"
+                                android:src="@drawable/ic_email"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:id="@+id/tv_email"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="start"
+                                android:textColor="@color/colorText"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/Linear_layout_no_telp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Linear_layout_email"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="100dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ic_telp"
+                                android:layout_width="21dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="left"
+                                android:layout_marginStart="6dp"
+                                android:gravity="left"
+                                android:src="@drawable/ic_telp"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:id="@+id/tv_no_hp"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="start"
+                                android:textColor="@color/colorText"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:id="@+id/ic_ubah_no_telp"
+                                android:layout_gravity="end|center_horizontal"
+                                android:src="@drawable/ic_edit"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:contentDescription="TODO" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/Linear_layout_alamat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Linear_layout_no_telp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="140dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ic_alamat"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="left"
+                                android:layout_marginStart="5dp"
+                                android:gravity="left"
+                                android:src="@drawable/ic_alamat"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:id="@+id/tv_detail_alamat"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="left"
+                                android:text="Alamat"
+                                android:textColor="@color/colorText"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:id="@+id/ic_ubah_alamat"
+                                android:layout_gravity="right|center_horizontal"
+                                android:src="@drawable/ic_edit"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:contentDescription="TODO"
+                                tools:ignore="RtlHardcoded" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/Linear_layout_lain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rv_data_pribadi"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="1dp">
+
+                        <TextView
+                            android:id="@+id/tv_lainnya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="Lainnya"
+                            android:gravity="left"
+                            android:textColor="@color/colorText"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:id="@+id/Linear_layout_kata_sandi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_lainnya"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="55dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ic_password"
+                                android:layout_width="24dp"
+                                android:layout_height="23dp"
+                                android:layout_gravity="left"
+                                android:layout_marginStart="5dp"
+                                android:gravity="left"
+                                android:src="@drawable/ic_kata_sandi"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:id="@+id/tv_katasandi"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Kata Sandi"
+                                android:textColor="@color/colorText"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:id="@+id/ic_ubah_kata_sandi"
+                                android:layout_gravity="right|center_horizontal"
+                                android:src="@drawable/ic_edit"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:contentDescription="TODO" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Linear_layout_data_pribadi"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="95dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ic_logout"
+                                android:layout_width="25dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginStart="5dp"
+                                android:gravity="left"
+                                android:src="@drawable/ic_logout"
+                                android:contentDescription="TODO" />
+
+                            <TextView
+                                android:id="@+id/tv_logout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Keluar"
+                                android:textColor="@color/colorText"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

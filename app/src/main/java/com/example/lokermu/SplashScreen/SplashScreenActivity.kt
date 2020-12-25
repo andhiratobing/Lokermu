@@ -1,4 +1,4 @@
-package com.example.lokermu
+package com.example.lokermu.SplashScreen
 
 import android.app.Activity
 import android.content.Intent
@@ -10,6 +10,7 @@ import android.os.Handler
 import android.view.View
 import android.view.WindowManager
 import com.example.lokermu.OnBoarding.Activity.OnBoardingSwipeActivity
+import com.example.lokermu.R
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

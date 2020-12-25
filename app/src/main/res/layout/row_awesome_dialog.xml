@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_sheet_background"
+        android:padding="24dp">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/image_success"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/success"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/image_failed"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/failed"/>
+
+        <TextView
+            android:id="@+id/title_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yeah"
+            android:layout_below="@id/image_success"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:fontFamily="@font/montserrat"
+            android:visibility="gone"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/title_failed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maaf"
+            android:layout_below="@id/image_failed"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:fontFamily="@font/montserrat"
+            android:visibility="gone"
+            android:textSize="25sp"/>
+
+
+        <TextView
+            android:id="@+id/subHeadingSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@id/title_success"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:fontFamily="@font/montserrat"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/subHeadingFailed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@id/title_failed"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:fontFamily="@font/montserrat"
+            android:visibility="gone"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/Btn_positive"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/backg_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAllCaps="false"
+            android:fontFamily="@font/ubuntu"
+            android:layout_below="@id/subHeadingSuccess"
+            android:text="Ya"
+            android:textColor="@color/putih"
+            android:visibility="gone"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/Btn_Negative"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/subHeadingFailed"
+            android:fontFamily="@font/ubuntu"
+            android:background="@drawable/backg_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Tidak"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:textColor="@color/putih"
+
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

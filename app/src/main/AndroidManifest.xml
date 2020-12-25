@@ -13,14 +13,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterActivity"
+        <activity android:name=".Activity.LamarankuActivity"></activity>
+        <activity android:name=".Activity.DaftarLowonganActivity" />
+        <activity android:name=".Activity.ProfileActivity" />
+        <activity android:name=".Activity.HomeActivity" />
+        <activity
+            android:name=".RegisterLogin.RegisterActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".RegisterLogin.LoginActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".OnBoarding.Activity.OnBoardingSwipeActivity"
+        <activity
+            android:name=".OnBoarding.Activity.OnBoardingSwipeActivity"
             android:screenOrientation="portrait" />
-            <activity android:name=".SplashScreenActivity"
-                android:screenOrientation="portrait" >
+        <activity
+            android:name=".SplashScreen.SplashScreenActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

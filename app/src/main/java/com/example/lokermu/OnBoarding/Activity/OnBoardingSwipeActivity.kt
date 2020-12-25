@@ -11,12 +11,9 @@ import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager.widget.ViewPager
-import com.example.lokermu.LoginActivity
+import com.example.lokermu.RegisterLogin.LoginActivity
 import com.example.lokermu.OnBoarding.Adapter.OnboardingViewPagerAdapter
 import com.example.lokermu.R
-import com.example.lokermu.OnBoarding.Utils.Animatoo
-import com.example.lokermu.OnBoarding.Utils.Preferences.Companion
-import java.util.prefs.Preferences
 
 @Suppress("DEPRECATION")
 class OnBoardingSwipeActivity : AppCompatActivity() {

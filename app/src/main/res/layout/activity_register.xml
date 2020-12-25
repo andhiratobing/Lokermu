@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:background="#014A73"
     app:popupTheme="@style/AppTheme.NoActionBar"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterLogin.RegisterActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/AppBar_register"
@@ -128,7 +128,7 @@
                                 android:id="@+id/et_Email"
                                 style="@style/modifiedEditText"
                                 android:fontFamily="@font/ubuntu"
-                                android:hint="@string/email_no_hp"
+                                android:hint="Email"
                                 android:inputType="textEmailAddress"
                                 android:lines="1"
                                 android:maxLength="100"
@@ -137,6 +137,23 @@
                                 android:textSize="15sp" />
                         </com.google.android.material.textfield.TextInputLayout>
 
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputNoHp"
+                            style="@style/parent"
+                            android:layout_margin="20dp">
+
+                            <EditText
+                                android:id="@+id/et_no_hp"
+                                style="@style/modifiedEditText"
+                                android:fontFamily="@font/ubuntu"
+                                android:hint="@string/no_hp"
+                                android:inputType="number"
+                                android:lines="1"
+                                android:maxLength="100"
+                                android:maxLines="1"
+                                android:textColor="#1A1C4D"
+                                android:textSize="15sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/textInputPassword"
@@ -149,30 +166,6 @@
                                 android:enabled="true"
                                 style="@style/modifiedEditText"
                                 android:hint="@string/kata_sandi"
-                                android:maxLines="1"
-                                android:lines="1"
-                                android:clickable="true"
-                                android:freezesText="true"
-                                android:singleLine="true"
-                                android:maxLength="100"
-                                android:fontFamily="@font/ubuntu"
-                                android:textColor="#1A1C4D"
-                                android:textSize="15sp"
-                                android:inputType="textPassword"
-                                android:focusable="true" />
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/textKonfirmasiPassword"
-                            app:passwordToggleEnabled="true"
-                            style="@style/parent"
-                            android:layout_margin="20dp">
-
-                            <EditText
-                                android:id="@+id/et_konfirmasi_kata_sandi"
-                                android:enabled="true"
-                                style="@style/modifiedEditText"
-                                android:hint="@string/konfrimasi_kata_sandi"
                                 android:maxLines="1"
                                 android:lines="1"
                                 android:clickable="true"
