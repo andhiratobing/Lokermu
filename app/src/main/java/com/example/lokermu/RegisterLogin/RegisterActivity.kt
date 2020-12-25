@@ -58,7 +58,7 @@ class RegisterActivity : AppCompatActivity() {
             window.statusBarColor = Color.TRANSPARENT
         }
 
-        LoginActivity.setWindowFlag(
+        setWindowFlag(
             this,
             WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false
         )

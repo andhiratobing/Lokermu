@@ -10,30 +10,17 @@ import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.lokermu.Adapter.AdapterDaftarLowongan
 import com.example.lokermu.BuildConfig
-import com.example.lokermu.Data.DataDaftarLowongan
-import com.example.lokermu.Models.DaftarLowongan
 import com.example.lokermu.R
-import com.example.lokermu.RegisterLogin.LoginActivity
 import com.example.lokermu.Utils.NetworkCheck
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import kotlinx.android.synthetic.main.activity_daftar_lowongan.*
-import kotlinx.android.synthetic.main.activity_register.*
-import java.util.ArrayList
+import kotlinx.android.synthetic.main.activity_notifikasi.*
 
-class DaftarLowonganActivity : AppCompatActivity() {
+
+class NotifikasiActivity : AppCompatActivity() {
     private val networkCheck = NetworkCheck(this)
-    lateinit var bottomSheetDialog: BottomSheetDialog
-    lateinit var bottomSheetView: View
-    lateinit var recyclerView: RecyclerView
-    private var list_lowongan : ArrayList<DaftarLowongan> = arrayListOf()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_daftar_lowongan)
+        setContentView(R.layout.activity_notifikasi)
         networkCheck.result = { isAvailable, type ->
             when (isAvailable) {
                 true -> {
@@ -54,33 +41,35 @@ class DaftarLowonganActivity : AppCompatActivity() {
 
             }
         }
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                    or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN )
+                    or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR )
             window.statusBarColor = Color.TRANSPARENT
         }
 
-        setWindowFlag(
+       setWindowFlag(
             this,
             WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false
         )
         window.statusBarColor = Color.TRANSPARENT
-        toolbar_daftar_lowongan.title = null
-        setSupportActionBar(toolbar_daftar_lowongan)
+        toolbar_notifikasi.title = null
+        setSupportActionBar(toolbar_notifikasi)
         if (BuildConfig.DEBUG && supportActionBar == null) {
             error("Assertion failed")
         }
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        recyclerView = findViewById(R.id.recylerview_daftar_lowongan)
-        recylerview_daftar_lowongan.setHasFixedSize(true)
-        recylerview_daftar_lowongan.layoutManager = LinearLayoutManager(this)
 
-        val listDaftarLowonganAdapter = AdapterDaftarLowongan(list_lowongan)
-        recyclerView.adapter = listDaftarLowonganAdapter
 
-        list_lowongan.addAll(DataDaftarLowongan.listData)
+
+
     }
+
+
+
+
+
 
     override fun onResume() {
         super.onResume()
@@ -92,11 +81,13 @@ class DaftarLowonganActivity : AppCompatActivity() {
         networkCheck.unregister()
     }
 
+
     override fun onBackPressed() {
         val intent = Intent(this, HomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val intent = Intent(this, HomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -108,6 +99,7 @@ class DaftarLowonganActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
     companion object {
         //Set Transparent Status bar
         fun setWindowFlag(activity: Activity, bits: Int, on: Boolean) {
@@ -122,5 +114,4 @@ class DaftarLowonganActivity : AppCompatActivity() {
         }
 
     }
-
 }

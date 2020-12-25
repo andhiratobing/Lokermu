@@ -23,10 +23,10 @@
     <string name="check_box_register">Saya sudah membaca dan menyetujui Syarat Ketentuan dan Kebijakan Privasi dari Lokermu</string>
     <string name="alamat">Alamat</string>
     <string name="no_hp">No HP</string>
-    <string-array name="deskripsi_kirim_lamaran">
-        <item>Keterangan :</item>
-        <item>1. Pengirim akan dialihkan ke Email</item>
-        <item>2. Berkas akan dikirimkan ke Email perusahaanyang sudah tertaut</item>
-        <item>3. Informasi lebih lanjut akan di informasikan melalui Email Pengirim</item>
-    </string-array>
+    <string name="deskripsi_kirim_lamaran">
+        Keterangan:
+        1. Pengirim akan dialihkan ke Email
+        2. Berkas akan dikirimkan ke Email perusahaanyang sudah tertaut
+        3. Informasi lebih lanjut akan di informasikan melalui Email Pengirim
+    </string>
 </resources>

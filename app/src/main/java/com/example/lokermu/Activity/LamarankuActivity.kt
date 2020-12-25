@@ -1,6 +1,7 @@
 package com.example.lokermu.Activity
 
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
@@ -9,9 +10,12 @@ import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.lokermu.BuildConfig
 import com.example.lokermu.R
 import com.example.lokermu.RegisterLogin.LoginActivity
+import kotlinx.android.synthetic.main.activity_daftar_lowongan.*
 import kotlinx.android.synthetic.main.activity_lamaranku.*
 
 
@@ -44,6 +48,32 @@ class LamarankuActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false
         )
         window.statusBarColor = Color.TRANSPARENT
+        toolbar_lamaranku.title = null
+        setSupportActionBar(toolbar_lamaranku)
+        if (BuildConfig.DEBUG && supportActionBar == null) {
+            error("Assertion failed")
+        }
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
+        img_kirim_email.setOnClickListener {
+            val TO = arrayOf("")
+            val emailIntent = Intent(Intent.ACTION_SENDTO)
+
+            //  emailIntent.data = Uri.parse("mailto:")
+            emailIntent.type = "text/plain"
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, TO)
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Melamar Pekerjaan")
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "")
+            try {
+                startActivity(Intent.createChooser(emailIntent, "Kirim Email"))
+            } catch (ex: ActivityNotFoundException) {
+                Toast.makeText(
+                    this,
+                    "There is no email client installed.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
     }
 
 

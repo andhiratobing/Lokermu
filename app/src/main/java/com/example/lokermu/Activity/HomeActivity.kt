@@ -8,14 +8,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
+import android.widget.ImageView
 import android.widget.Toast
+import com.bumptech.glide.Glide
+import com.example.lokermu.Models.Pengguna
 import com.example.lokermu.R
 import com.example.lokermu.RegisterLogin.RegisterActivity
 import com.example.lokermu.Utils.CustomProgressDialog
 import com.example.lokermu.Utils.NetworkCheck
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
+    lateinit var userr: MutableList<Pengguna>
     private val progressDialog = CustomProgressDialog()
     private val networkCheck = NetworkCheck(this)
     private var backPressedTime: Long = 0
@@ -55,6 +64,8 @@ class HomeActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false
         )
         window.statusBarColor = Color.TRANSPARENT
+        userr = mutableListOf()
+
 
         card_view_daftar_lowongan.setOnClickListener {
             intent = Intent(this, DaftarLowonganActivity::class.java)
@@ -69,6 +80,49 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        image_menu_home.setOnClickListener {
+            intent = Intent(this, ProfileActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
+
+        icon_notifikasi.setOnClickListener {
+            intent = Intent(this, NotifikasiActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
+
+
+        val uid = FirebaseAuth.getInstance().uid ?: ""
+        val ref = FirebaseDatabase.getInstance().getReference("users/$uid").child("profile")
+
+        ref.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (h in snapshot.children) {
+                        val pengguna = h.getValue(Pengguna::class.java)
+                        userr.add(pengguna!!)
+
+                        Glide.with(applicationContext).load(pengguna.image_profile)
+                            .into(image_menu_home)
+                        Glide.with(applicationContext).load(pengguna.image_profile)
+                            .placeholder(R.drawable.ic_foto_user).into(image_menu_home)
+                        if (pengguna.image_profile?.equals("default")!!) {
+                            Glide.with(applicationContext).load(pengguna.image_profile).placeholder(
+                                R.drawable.ic_foto_user).into(image_menu_home)
+                        }
+                    }
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
     }
 
 

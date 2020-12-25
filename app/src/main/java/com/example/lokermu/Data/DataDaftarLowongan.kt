@@ -11,23 +11,29 @@ object DataDaftarLowongan {
             "Kota Jakarta Selatan",
             "Full Time",
             "Job Qualification\n"+
-                    "1. Familiar with Market Research or Corporate Planning\n"+
-                    "2. Market Analysis skill\n"+
-                    "3. Experienced in B2B Research\n"+
-                    "4. Familiar with Database and Analytics Tools\n"+
-                    "5. Have Basic Intermediate IoT Knowledge (Digitalization)\n",
+                    "~ Familiar with Market Research or Corporate\n"+
+                    "   Planning\n"+
+                    "~ Market Analysis skill\n"+
+                    "~ Experienced in B2B Research\n"+
+                    "~ Familiar with Database and Analytics Tools\n"+
+                    "~ Have Basic Intermediate IoT Knowledge\n"+
+                    "   (Digitalization)\n",
             "Requirement\n"+
-                    "1. Candidate must possess at least Bachelor Degree from statistic,mathematic, adn informatic system (prefearably)\n"+
-                    "2. At least 2 year(s) of Working experience in the relate field is required for this position\n"+
-                    "3. Required skill(s) : Market research, market analyst, corporate planning\n"+
-                    "4. Able to join immediately\n"+
-                    "5. Preferable Staff specialized in marketing / Business Development or equivalent\n"+
-                    "6. Placement in : Head Office Jakarta\n",
+                    "~ Candidate must possess at least Bachelor Degree\n"+
+                    "   from statistic,mathematic, adn informatic system\n"+
+                    "   (prefearably)\n"+
+                    "~ At least 2 year(s) of Working experience in the relate\n"+
+                    "   field is required for this position\n"+
+                    "~ Required skill(s) : Market research, market analyst,\n"+
+                    "   corporate planning\n"+
+                    "~ Able to join immediately\n"+
+                    "~ Preferable Staff specialized in marketing/Business\n"+
+                    "   Development or equivalent\n"+
+                    "~ Placement in : Head Office Jakarta\n",
             "-",
             "20 Januari 2021",
-            "Wawancara",
-
-
+            "~Wawancara",
+            "sumberdaya@gmail.com"
         )
     )
     val listData: ArrayList<DaftarLowongan>
@@ -43,8 +49,9 @@ object DataDaftarLowongan {
                 daftar.Job_Qualification = aData[5]
                 daftar.Requirement = aData[6]
                 daftar.benefit = aData[7]
-                daftar.dateline = aData[8]
+                daftar.deadline = aData[8]
                 daftar.jenis_tes = aData[9]
+                daftar.kontak_person = aData[10]
 
                 list.add(daftar)
             }

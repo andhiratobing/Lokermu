@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:popupTheme="@style/AppTheme.NoActionBar"
+    tools:context=".Activity.NotifikasiActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBar_notifikasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/putih"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_notifikasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back_hitam"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:background="@color/putih">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/AppBar_notifikasi"
+        android:gravity="center"
+        android:background="@color/putih"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_pengiriman_tabung_kosong"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_kosong"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:layout_below="@+id/img_pengiriman_tabung_kosong"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="Notifikasi tidak ada"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="normal"
+        android:textSize="18sp"
+        android:textColor="@color/abu_abu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</RelativeLayout>
