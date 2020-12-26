@@ -76,6 +76,12 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        lupa_kata_sandi.setOnClickListener {
+            intent = Intent(this@LoginActivity, LupaKataSandiActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
 
         btn_login.setOnClickListener {
             UserLogin()

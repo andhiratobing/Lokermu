@@ -6,7 +6,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
 
     <application
@@ -16,15 +17,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.NotifikasiActivity"
+        <activity android:name=".RegisterLogin.LupaKataSandiActivity"></activity>
+        <activity
+            android:name=".Activity.NotifikasiActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.LamarankuActivity"
+        <activity
+            android:name=".Activity.LamarankuActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.DaftarLowonganActivity"
+        <activity
+            android:name=".Activity.DaftarLowonganActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.ProfileActivity"
+        <activity
+            android:name=".Activity.ProfileActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.HomeActivity"
+        <activity
+            android:name=".Activity.HomeActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".RegisterLogin.RegisterActivity"

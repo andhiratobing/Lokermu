@@ -7,10 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -20,9 +17,12 @@ import com.example.lokermu.Models.DaftarLowongan
 import com.example.lokermu.R
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.row_detail_lowongan.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
-class AdapterDaftarLowongan(private val list_lowongan: ArrayList<DaftarLowongan>) : RecyclerView.Adapter<AdapterDaftarLowongan.ListViewHolder>() {
+class AdapterDaftarLowongan(private val list_lowongan: ArrayList<DaftarLowongan>)
+    : RecyclerView.Adapter<AdapterDaftarLowongan.ListViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(
@@ -70,22 +70,7 @@ class AdapterDaftarLowongan(private val list_lowongan: ArrayList<DaftarLowongan>
             bottomSheetView.tv_isi_deadline.text = list_lowongan[position].deadline
             bottomSheetView.tv_isi_tes.text = list_lowongan[position].jenis_tes
             bottomSheetView.tv_isi_contact_person.text = list_lowongan[position].kontak_person
-/*
-            bottomSheetView.btn_daftar_pekerjaan.setOnClickListener {
-                //list_lowongan[position].kontak_person
-                val intent = Intent(Intent.ACTION_SENDTO)
-                intent.type = "text/plain"
-                intent.putExtra(Intent.EXTRA_EMAIL, daftar_lowongan.kontak_person)
-                intent.putExtra(Intent.EXTRA_SUBJECT, "Melamar Pekerjaan")
-                intent.putExtra(Intent.EXTRA_TEXT, "Saya telah melampirkan berkas pendaftaran pekerjaan")
 
-            context.startActivity(Intent.createChooser(intent, "Send feedback"))
-
-
-            }
-
-
- */
             bottomSheetView.btn_daftar_pekerjaan.setOnClickListener {
                 val TO = arrayOf(list_lowongan[position].kontak_person)
                 val emailIntent = Intent(Intent.ACTION_SENDTO)
