@@ -135,7 +135,9 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         if (cekbox.isChecked){
-            Toast.makeText(this, "Ceklis syarat dan ketentuan", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Sudah ceklis", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(this, "Ceklis Syarat dan Ketentuan", Toast.LENGTH_SHORT).show()
             return
         }
 
