@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fitsSystemWindows="true"
-    app:popupTheme="@style/AppTheme.NoActionBar"
-    android:background="#014A73"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#014A73"
+    android:fitsSystemWindows="true"
+    app:popupTheme="@style/AppTheme.NoActionBar"
     tools:context=".Activity.ProfileActivity">
 
 
@@ -38,64 +37,66 @@
 
     <LinearLayout
         android:id="@+id/linear_layout_image"
-        android:orientation="vertical"
-        android:layout_below="@id/AppBar_pengaturan"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_view_foto_profile"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_gravity="center|top"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_foto_user"
-        app:civ_border_color="#FFFFFF"
-        app:civ_border_width="4dp" />
-
-    <LinearLayout
-        android:id="@+id/Linear_layout_nama_lengkap"
-        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:layout_below="@id/AppBar_pengaturan"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_nama_lengkap"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_view_foto_profile"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_foto_user"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="4dp" />
+
+        <LinearLayout
+            android:id="@+id/Linear_layout_nama_lengkap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:textColor="@color/putih"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_nama_lengkap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:textColor="@color/putih"
+                android:textSize="20sp" />
+        </LinearLayout>
 
 
-    <ImageView
-        android:id="@+id/ic_ubah_nama_lengkap"
-        android:layout_gravity="center|bottom"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_edit_putih"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
-        android:contentDescription="TODO" />
+        <ImageView
+            android:id="@+id/ic_ubah_nama_lengkap"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/ic_edit_putih" />
     </LinearLayout>
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll_view"
-        android:layout_below="@id/linear_layout_image"
-        android:background="#D0D7F9"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/linear_layout_image"
+        android:background="#D0D7F9">
 
         <LinearLayout
             android:id="@+id/layout_akun"
-            android:layout_below="@id/linear_layout_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout_image"
             android:orientation="vertical"
             app:popupTheme="@style/AppTheme.NoActionBar">
 
@@ -139,8 +140,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
-                                android:layout_marginEnd="20dp"
                                 android:layout_marginTop="5dp"
+                                android:layout_marginEnd="20dp"
                                 android:fontFamily="@font/ubuntu_bold"
                                 android:gravity="left"
                                 android:text="Data pribadi"
@@ -161,19 +162,20 @@
                                 android:id="@+id/ic_email"
                                 android:layout_width="22dp"
                                 android:layout_height="21dp"
-                                android:layout_gravity="center"
-                                android:scaleType="centerCrop"
+                                android:layout_gravity="start"
                                 android:layout_marginStart="5dp"
-                                android:gravity="left"
-                                android:src="@drawable/ic_email"
-                                android:contentDescription="TODO" />
+                                android:contentDescription="TODO"
+                                android:gravity="center"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_email" />
 
                             <TextView
                                 android:id="@+id/tv_email"
-                                android:layout_width="250dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginStart="12dp"
+                                android:layout_marginEnd="20dp"
                                 android:fontFamily="@font/montserrat"
                                 android:gravity="start"
                                 android:textColor="@color/colorText"
@@ -185,7 +187,6 @@
                             android:id="@+id/Linear_layout_no_telp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/Linear_layout_email"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="100dp"
                             android:orientation="horizontal">
@@ -194,15 +195,15 @@
                                 android:id="@+id/ic_telp"
                                 android:layout_width="21dp"
                                 android:layout_height="22dp"
-                                android:layout_gravity="left"
-                                android:layout_marginStart="6dp"
-                                android:gravity="left"
-                                android:src="@drawable/ic_telp"
-                                android:contentDescription="TODO" />
+                                android:layout_gravity="start"
+                                android:layout_marginStart="5dp"
+                                android:contentDescription="TODO"
+                                android:gravity="center"
+                                android:src="@drawable/ic_telp" />
 
                             <TextView
                                 android:id="@+id/tv_no_hp"
-                                android:layout_width="250dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginStart="12dp"
@@ -211,21 +212,26 @@
                                 android:textColor="@color/colorText"
                                 android:textSize="15sp" />
 
-                            <ImageView
-                                android:id="@+id/ic_ubah_no_telp"
-                                android:layout_gravity="end|center_horizontal"
-                                android:src="@drawable/ic_edit"
-                                android:layout_marginStart="20dp"
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
-                                android:contentDescription="TODO" />
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/ic_ubah_no_telp"
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_gravity="end"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:src="@drawable/ic_edit" />
+                            </RelativeLayout>
                         </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/Linear_layout_alamat"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/Linear_layout_no_telp"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="140dp"
                             android:orientation="horizontal">
@@ -234,33 +240,39 @@
                                 android:id="@+id/ic_alamat"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:layout_gravity="left"
+                                android:layout_gravity="start"
                                 android:layout_marginStart="5dp"
-                                android:gravity="left"
-                                android:src="@drawable/ic_alamat"
-                                android:contentDescription="TODO" />
+                                android:contentDescription="TODO"
+                                android:gravity="center"
+                                android:src="@drawable/ic_alamat" />
 
                             <TextView
                                 android:id="@+id/tv_detail_alamat"
-                                android:layout_width="250dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginStart="12dp"
                                 android:fontFamily="@font/montserrat"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:text="Alamat"
                                 android:textColor="@color/colorText"
                                 android:textSize="15sp" />
 
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
                             <ImageView
                                 android:id="@+id/ic_ubah_alamat"
-                                android:layout_gravity="right|center_horizontal"
-                                android:src="@drawable/ic_edit"
-                                android:layout_marginStart="20dp"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
+                                android:layout_gravity="end"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginStart="20dp"
                                 android:contentDescription="TODO"
+                                android:src="@drawable/ic_edit"
                                 tools:ignore="RtlHardcoded" />
+                            </RelativeLayout>
 
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -273,6 +285,7 @@
                     android:layout_height="match_parent"
                     android:layout_below="@id/rv_data_pribadi"
                     android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
@@ -293,11 +306,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
-                            android:layout_marginEnd="20dp"
                             android:layout_marginTop="15dp"
+                            android:layout_marginEnd="20dp"
                             android:fontFamily="@font/ubuntu_bold"
-                            android:text="Lainnya"
                             android:gravity="left"
+                            android:text="Lainnya"
                             android:textColor="@color/colorText"
                             android:textSize="16sp" />
 
@@ -316,36 +329,42 @@
                                 android:layout_height="23dp"
                                 android:layout_gravity="left"
                                 android:layout_marginStart="5dp"
+                                android:contentDescription="TODO"
                                 android:gravity="left"
-                                android:src="@drawable/ic_kata_sandi"
-                                android:contentDescription="TODO" />
+                                android:src="@drawable/ic_kata_sandi" />
 
                             <TextView
                                 android:id="@+id/tv_katasandi"
-                                android:layout_width="250dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:gravity="center"
                                 android:layout_marginStart="12dp"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Kata Sandi"
                                 android:textColor="@color/colorText"
                                 android:textSize="15sp" />
 
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
                             <ImageView
                                 android:id="@+id/ic_ubah_kata_sandi"
-                                android:layout_gravity="right|center_horizontal"
-                                android:src="@drawable/ic_edit"
-                                android:layout_marginStart="20dp"
                                 android:layout_width="22dp"
                                 android:layout_height="22dp"
-                                android:contentDescription="TODO" />
-
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:contentDescription="TODO"
+                                android:src="@drawable/ic_edit" />
+                            </RelativeLayout>
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="300dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/Linear_layout_data_pribadi"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="95dp"
                             android:orientation="horizontal">
@@ -353,18 +372,19 @@
                             <ImageView
                                 android:id="@+id/ic_logout"
                                 android:layout_width="25dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="left"
+                                android:layout_height="25dp"
+                                android:layout_gravity="start"
                                 android:layout_marginStart="5dp"
-                                android:gravity="left"
-                                android:src="@drawable/ic_logout"
-                                android:contentDescription="TODO" />
+                                android:contentDescription="TODO"
+                                android:gravity="center"
+                                android:src="@drawable/ic_logout" />
 
                             <TextView
                                 android:id="@+id/tv_logout"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
+                                android:layout_gravity="start"
+                                android:gravity="center"
                                 android:layout_marginStart="12dp"
                                 android:fontFamily="@font/montserrat"
                                 android:text="Keluar"

@@ -134,6 +134,12 @@ class RegisterActivity : AppCompatActivity() {
             return
         }
 
+        if (cekbox.isChecked){
+            Toast.makeText(this, "Ceklis syarat dan ketentuan", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+
         val id_pengguna = UUID.randomUUID().toString()
         val user = Pengguna(
             id_pengguna,

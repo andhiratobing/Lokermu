@@ -254,7 +254,7 @@ object DataDaftarLowongan {
         ),
         arrayOf(
             "https://media-exp1.licdn.com/dms/image/C510BAQEoOK0z9HZcQA/company-logo_200_200/0/1551151781846?e=1617235200&v=beta&t=_v7ybfNS5PNCn8-yTQBqZHSFNxfg5lFl-IN-2g3e3iI",
-            "Software Developer In Test Speacialist",
+            "Software Developer",
             "LinkAja",
             "Jakarta Raya, Indonesia",
             "Full Time",

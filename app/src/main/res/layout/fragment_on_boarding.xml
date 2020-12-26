@@ -15,12 +15,11 @@
     <ImageView
         android:id="@+id/image_onboarding"
         android:layout_width="380dp"
-        android:layout_height="331dp"
-        android:paddingTop="60dp"
+        android:layout_height="360dp"
         android:paddingBottom="5dp"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:scaleType="centerCrop" />
@@ -32,7 +31,7 @@
         android:layout_below="@id/image_onboarding"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="81dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/ubuntu_bold"
@@ -52,5 +51,4 @@
         android:gravity="center"
         android:textColor="#0E527B"
         android:textSize="20sp" />
-
 </RelativeLayout>

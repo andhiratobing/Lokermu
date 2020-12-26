@@ -71,25 +71,18 @@ class AdapterDaftarLowongan(private val list_lowongan: ArrayList<DaftarLowongan>
             bottomSheetView.tv_isi_tes.text = list_lowongan[position].jenis_tes
             bottomSheetView.tv_isi_contact_person.text = list_lowongan[position].kontak_person
 
+
             bottomSheetView.btn_daftar_pekerjaan.setOnClickListener {
                 val TO = arrayOf(list_lowongan[position].kontak_person)
                 val emailIntent = Intent(Intent.ACTION_SENDTO)
 
-              //  emailIntent.data = Uri.parse("mailto:")
+                emailIntent.data = Uri.parse("mailto:")
                 emailIntent.type = "text/plain"
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, TO)
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Melamar Pekerjaan")
                 emailIntent.putExtra(Intent.EXTRA_TEXT, "")
+                context.startActivity(Intent.createChooser(emailIntent, "Kirim Email"))
 
-                try {
-                    context.startActivity(Intent.createChooser(emailIntent, "Kirim Email"))
-                } catch (ex: ActivityNotFoundException) {
-                    Toast.makeText(
-                        context,
-                        "There is no email client installed.",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
             }
 
 
